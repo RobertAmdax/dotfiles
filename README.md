@@ -25,7 +25,7 @@ This repository contains my personal dotfiles managed with GNU Stow.
 
 ## Structure
 
-- `zsh/` - Zsh shell configuration
+- `zsh/` - Zsh shell configuration (.zshrc and .zprofile)
 - `nvim/` - Neovim editor configuration
 - `git/` - Git configuration (.gitconfig)
 - `wezterm/` - WezTerm terminal configuration
