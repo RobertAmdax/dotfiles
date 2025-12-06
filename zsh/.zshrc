@@ -1,4 +1,13 @@
-eval "$(starship init zsh)"
+# ---- Shell Environment Setup -----
+# Ensure Homebrew is in PATH (in case .zprofile wasn't loaded)
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Initialize starship prompt
+if command -v starship >/dev/null; then
+    eval "$(starship init zsh)"
+fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
