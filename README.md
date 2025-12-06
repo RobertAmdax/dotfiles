@@ -17,7 +17,7 @@ This repository contains my personal dotfiles managed with GNU Stow.
 3. Use stow to symlink configurations:
    ```bash
    # Stow individual packages
-   stow zsh nvim git wezterm starship kitty github-cli alacritty
+   stow zsh nvim git wezterm starship kitty github-cli alacritty warp
    
    # Or stow everything at once
    stow */
@@ -33,6 +33,7 @@ This repository contains my personal dotfiles managed with GNU Stow.
 - `kitty/` - Kitty terminal configuration
 - `github-cli/` - GitHub CLI configuration
 - `alacritty/` - Alacritty terminal configuration
+- `warp/` - Warp terminal configuration (AI-powered)
 
 ## Requirements
 
