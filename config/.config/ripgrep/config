@@ -1,0 +1,28 @@
+# ripgrep configuration
+--max-columns=150
+--max-columns-preview
+
+# Search hidden files and directories
+--hidden
+
+# Follow symbolic links
+--follow
+
+# Don't search binary files
+--binary
+
+# Add custom types
+--type-add
+web:*.{html,css,js,jsx,ts,tsx,vue,svelte}
+--type-add
+config:*.{yml,yaml,toml,ini,conf,config}
+
+# Ignore patterns
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!target/*
+--glob=!dist/*
+--glob=!build/*
+--glob=!*.lock
+--glob=!package-lock.json
+--glob=!yarn.lock

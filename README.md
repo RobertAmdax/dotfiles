@@ -43,11 +43,17 @@ stow -R zsh
 
 - **zsh/**: Shell configuration (`.zshrc`)
 - **wezterm/**: Terminal emulator configuration (`.wezterm.lua`)
+- **tmux/**: Terminal multiplexer configuration (`.tmux.conf`)
+- **git/**: Git configuration (`.gitconfig`)
+- **ssh/**: SSH client configuration (`.ssh/config`)
 - **config/**: All `.config` directory contents including:
   - **nvim/**: Neovim configuration with Lazy.nvim
+  - **ripgrep/**: ripgrep configuration
   - **raycast/**: Raycast extensions and config
   - **sketchybar/**: macOS status bar configuration
   - **karabiner/**: Keyboard customization (macOS)
+- **env/**: Environment variable templates
+- **scripts/**: Utility scripts for system setup
   - **bat/**: Better cat themes
   - **kitty/**: Terminal emulator config
   - **packer/**: Binary packer

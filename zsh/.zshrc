@@ -37,13 +37,49 @@ alias tf="terraform"
 alias cls="clear"
 alias please="sudo"
 alias lg="lazygit"
-alias top="btop"
+alias top="btm"
 
 # fzf quick search
 alias ff="fd --type f | fzf --preview 'bat --color=always {}'"
+alias fzd="fd --type d | fzf --preview 'eza --icons --tree {} | head -20'"
 
 # Reload config
 alias reload="source ~/.zshrc"
+
+# System aliases
+alias df="duf"
+alias du="dust"
+alias ps="procs"
+alias find="fd"
+alias grep="rg"
+
+# Docker aliases
+alias dps="docker ps"
+alias dimg="docker images"
+alias dexec="docker exec -it"
+alias dlog="docker logs -f"
+alias dcup="docker-compose up -d"
+alias dcdown="docker-compose down"
+
+# Network utilities
+alias ip="ip -c=auto"
+alias ping="prettyping"
+
+# File operations
+alias mkdir="mkdir -pv"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+alias realcat="/bin/cat"
+
+# Development shortcuts
+alias python="python3"
+alias pip="pip3"
+alias serve="python -m http.server"
+
+# VM Management
+alias vms="~/dotfiles/scripts/azure-tmux.sh"
+alias vmcmd="~/dotfiles/scripts/azure-commands.sh"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.virtualenvs/venv/bin/python

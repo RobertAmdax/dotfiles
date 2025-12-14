@@ -28,7 +28,7 @@ cd "$DOTFILES_DIR" || {
 print_info "Setting up dotfiles with GNU Stow..."
 
 # Available packages
-PACKAGES=("zsh" "wezterm" "config")
+PACKAGES=("zsh" "wezterm" "config" "git" "tmux" "ssh")
 
 # Function to backup existing files
 backup_if_exists() {
