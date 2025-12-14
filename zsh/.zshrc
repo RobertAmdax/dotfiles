@@ -77,3 +77,10 @@ zinit light Aloxaf/fzf-tab
 
 eval "$(zoxide init zsh)"
 # 1Password CLI - set OP_SERVICE_ACCOUNT_TOKEN environment variable externally
+
+# Load local environment variables (not committed to git)
+if [ -f ~/.env.local ]; then
+    set -a  # automatically export all variables
+    source ~/.env.local
+    set +a
+fi

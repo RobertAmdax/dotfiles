@@ -1,0 +1,6 @@
+
+# Sensitive local files
+.env.local
+.env
+*.key
+*.pem
