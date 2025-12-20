@@ -1,30 +1,46 @@
-# Starship - Catppuccin Ristretto (ASCII safe)
-format = """
-[<](#D7827E)$directory[|](fg:#D7827E)$git_branch$git_status[|](fg:#A6B789)$python$kubernetes[|](fg:#E5C07B)$cmd_duration
-$character
-"""
+# Minimal, Flat, Modern Starship Prompt for WezTerm
+format = "$directory $git_branch$git_status $nodejs$python $cmd_duration\n$character "
+
 [directory]
-style = "fg:#1C1410 bg:#D7827E bold"
-format = " $path "
+style = "bold blue"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "red"
+format = "[$path]($style)"
+
 [git_branch]
-symbol = "git:"
-style = "fg:#1C1410 bg:#A6B789"
-format = " $symbol$branch "
+symbol = "⎇ "
+style = "bold purple"
+format = "[$symbol$branch]($style)"
+
 [git_status]
-style = "fg:#1C1410 bg:#A6B789"
-format = " ($all_status$ahead_behind)"
+style = "yellow"
+format = "[$all_status$ahead_behind]($style)"
+
+[nodejs]
+symbol = "⬢ "
+style = "green"
+format = "[$symbol($version )]($style)"
+disabled = false
+
 [python]
-symbol = "py:"
-style = "fg:#1C1410 bg:#E5C07B"
-format = " $symbol$version "
-[kubernetes]
-symbol = "k8s:"
-style = "fg:#1C1410 bg:#E5C07B"
-format = " $symbol$context "
+symbol = "🐍 "
+style = "yellow"
+format = "[$symbol$version]($style)"
+disabled = false
+
 [cmd_duration]
-style = "fg:#E5C07B"
-format = " time:$duration "
+style = "bold italic yellow"
+format = "[⏱ $duration]($style)"
+min_time = 2000
+
 [character]
-success_symbol = "[>](bold fg:#A6B789)"
-error_symbol   = "[>](bold fg:#D7827E)"
-vicmd_symbol   = "[<](bold fg:#B292BB)"
+success_symbol = "[➜](green)"
+error_symbol = "[➜](red)"
+vicmd_symbol = "[←](yellow)"
+
+[line_break]
+disabled = true
+
+# Optional: add more modules as needed
