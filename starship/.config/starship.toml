@@ -1,0 +1,46 @@
+# Minimal, Flat, Modern Starship Prompt for WezTerm
+format = "$directory $git_branch$git_status $nodejs$python $cmd_duration\n$character "
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "red"
+format = "[$path]($style)"
+
+[git_branch]
+symbol = "⎇ "
+style = "bold purple"
+format = "[$symbol$branch]($style)"
+
+[git_status]
+style = "yellow"
+format = "[$all_status$ahead_behind]($style)"
+
+[nodejs]
+symbol = "⬢ "
+style = "green"
+format = "[$symbol($version )]($style)"
+disabled = false
+
+[python]
+symbol = "🐍 "
+style = "yellow"
+format = "[$symbol$version]($style)"
+disabled = false
+
+[cmd_duration]
+style = "bold italic yellow"
+format = "[⏱ $duration]($style)"
+min_time = 2000
+
+[character]
+success_symbol = "[➜](green)"
+error_symbol = "[➜](red)"
+vicmd_symbol = "[←](yellow)"
+
+[line_break]
+disabled = true
+
+# Optional: add more modules as needed
