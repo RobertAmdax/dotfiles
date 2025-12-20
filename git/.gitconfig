@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [user]
     name = Robert Bakker
     email = your-email@example.com
@@ -51,3 +52,9 @@
     amend = commit -a --amend
     count = !git shortlog -sn
     ignored = !git ls-files -v | grep "^[[:lower:]]"
+||||||| empty tree
+=======
+[user]
+	email = robert@amdax.com
+	name = Robert Bakker
+>>>>>>> master

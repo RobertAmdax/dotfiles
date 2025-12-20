@@ -1,6 +1,32 @@
+# Sensitive local files
+.env.local
+.env
+*.key
+*.pem
+<<<<<<< HEAD
 
 # Sensitive local files
 .env.local
 .env
 *.key
 *.pem
+||||||| empty tree
+=======
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Vim/Neovim temporary files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+>>>>>>> master

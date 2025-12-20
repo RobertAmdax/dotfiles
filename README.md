@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AMDAX Dotfiles with GNU Stow
 
 This repository contains Robert's dotfiles managed with GNU Stow for easy deployment across systems.
@@ -41,19 +42,11 @@ stow -R zsh
 
 ## Package Structure
 
-- **zsh/**: Shell configuration (`.zshrc`)
-- **wezterm/**: Terminal emulator configuration (`.wezterm.lua`)
-- **tmux/**: Terminal multiplexer configuration (`.tmux.conf`)
-- **git/**: Git configuration (`.gitconfig`)
-- **ssh/**: SSH client configuration (`.ssh/config`)
-- **config/**: All `.config` directory contents including:
   - **nvim/**: Neovim configuration with Lazy.nvim
   - **ripgrep/**: ripgrep configuration
   - **raycast/**: Raycast extensions and config
   - **sketchybar/**: macOS status bar configuration
   - **karabiner/**: Keyboard customization (macOS)
-- **env/**: Environment variable templates
-- **scripts/**: Utility scripts for system setup
   - **bat/**: Better cat themes
   - **kitty/**: Terminal emulator config
   - **packer/**: Binary packer
@@ -61,25 +54,16 @@ stow -R zsh
 ## Current Status
 
 ✅ Successfully stowed:
-- zsh configuration
-- wezterm configuration  
-- config package (including preserved nvim settings)
 
 ⚠️ Note: Some zsh configuration paths may need adjustment for Ubuntu (originally configured for macOS with Homebrew)
 
 ## Backup Files
 
 The installation script automatically backs up existing files with timestamps:
-- `.zshrc.backup.YYYYMMDD_HHMMSS`
-- `.config/NuGet/nuget.config.backup`
 
 ## Neovim Configuration
 
 Your Neovim setup includes:
-- Lazy.nvim plugin manager
-- Custom lua configuration structure
-- Telescope, treesitter, lualine, and more plugins
-- All settings preserved from original dotfiles
 
 ## Managing Updates
 
@@ -97,6 +81,47 @@ After making changes to any dotfile:
 
 ## Troubleshooting
 
-- If stow reports conflicts, check for existing files and back them up
-- Use `stow -D package` to remove symlinks before reinstalling
-- Check symlinks: `ls -la ~/ | grep "->"`
+||||||| empty tree
+=======
+# Dotfiles Repository
+
+This repository contains my personal dotfiles managed with GNU Stow.
+
+## Setup
+
+1. Clone this repository to your home directory:
+   ```bash
+   git clone git@github.com:robertamdax/dotfiles.git ~/dotfiles
+   ```
+
+2. Navigate to the dotfiles directory:
+   ```bash
+   cd ~/dotfiles
+   ```
+
+3. Use stow to symlink configurations:
+   ```bash
+   # Stow individual packages
+   stow zsh nvim git wezterm starship kitty github-cli alacritty warp
+   
+   # Or stow everything at once
+   stow */
+   ```
+
+## Structure
+
+- `zsh/` - Zsh shell configuration (.zshrc and .zprofile)
+- `nvim/` - Neovim editor configuration
+- `git/` - Git configuration (.gitconfig)
+- `wezterm/` - WezTerm terminal configuration
+- `starship/` - Starship prompt configuration
+- `kitty/` - Kitty terminal configuration
+- `github-cli/` - GitHub CLI configuration
+- `alacritty/` - Alacritty terminal configuration
+- `warp/` - Warp terminal configuration (AI-powered)
+
+## Requirements
+
+- GNU Stow: `brew install stow`
+
+>>>>>>> master
