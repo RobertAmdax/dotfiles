@@ -1,46 +1,36 @@
-# Minimal, Flat, Modern Starship Prompt for WezTerm
-format = "$directory $git_branch$git_status $nodejs$python $cmd_duration\n$character "
-
-[directory]
-style = "bold blue"
-truncation_length = 3
-truncation_symbol = "…/"
-read_only = " "
-read_only_style = "red"
-format = "[$path]($style)"
-
-[git_branch]
-symbol = "⎇ "
-style = "bold purple"
-format = "[$symbol$branch]($style)"
-
-[git_status]
-style = "yellow"
-format = "[$all_status$ahead_behind]($style)"
-
-[nodejs]
-symbol = "⬢ "
-style = "green"
-format = "[$symbol($version )]($style)"
-disabled = false
+# Starship configuration
 
 [python]
-symbol = "🐍 "
-style = "yellow"
-format = "[$symbol$version]($style)"
-disabled = false
-
-[cmd_duration]
-style = "bold italic yellow"
-format = "[⏱ $duration]($style)"
-min_time = 2000
+# Only show the module when inside a Python virtual environment
+detect_extensions = ['py', 'ipynb', 'pyc', 'pyd', 'pyo', 'pyw', 'pyz']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini']
+detect_folders = []
+# Show venv name when activated
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = '🐍 '
+style = 'yellow bold'
+pyenv_version_name = false
+python_binary = ['python', 'python3', 'python2']
 
 [character]
-success_symbol = "[➜](green)"
-error_symbol = "[➜](red)"
-vicmd_symbol = "[←](yellow)"
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
 
-[line_break]
-disabled = true
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
 
-# Optional: add more modules as needed
+[git_branch]
+symbol = '🌱 '
+format = '[$symbol$branch]($style) '
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[hostname]
+ssh_only = true
+format = '[$hostname](bold blue) '
+
+[username]
+show_always = false
+format = '[$user]($style) in '
