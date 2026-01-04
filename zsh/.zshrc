@@ -132,15 +132,15 @@ setopt prompt_subst          # Allow variables in prompt
 #  🐍 Python Virtualenvwrapper (Optional)
 # =====================================================================
 
-if command -v virtualenvwrapper.sh >/dev/null 2>&1; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  export VIRTUALENVWRAPPER_PYTHON=$(which python3)
-  source $(which virtualenvwrapper.sh)
-fi
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.virtualenvs/venv/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.virtualenvs/venv/bin/virtualenv
+source $HOME/.virtualenvs/venv/bin/virtualenvwrapper.sh
+
 
 # =====================================================================
 #  ✅ End of File
 # =====================================================================
 
 
-
+source $HOME/code/amdax/it-cloud-scripts/.env
